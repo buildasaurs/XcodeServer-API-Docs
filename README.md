@@ -5,7 +5,7 @@
 **This is Work In Progress, more documentation is being added over time**
 
 # :thought_balloon: Purpose
-Many of us like the Xcode Server continuous integration tool. Recently it introduced an API which allows you to integrate it in your workflow. This API is however not yet fully documented, which this project attempts to fix.
+Many of us like the [Xcode Server](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/xcode_guide-continuous_integration/) continuous integration tool. [Recently](https://developer.apple.com/videos/wwdc/2015/?id=410) it introduced an API which allows you to integrate it in your workflow. This API is however not yet fully documented, which this project attempts to fix.
 
 This knowledge is used in [XcodeServerSDK](https://github.com/czechboy0/XcodeServerSDK), an unofficial SDK for talking to the Xcode Server API written in Swift. This enables tools like [Buildasaur](https://github.com/czechboy0/Buildasaur), which allow for Xcode Server to be an even more powerful tool.
 
