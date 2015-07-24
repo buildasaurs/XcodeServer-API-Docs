@@ -37,7 +37,7 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 - `POST /integrations/:id/files`
 - `PUT /files/:id/upload`
 
-## Authentication
+## Authentication [use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BAuth.swift)
 
 - `POST /auth/login`
 - `POST /auth/force_login`
@@ -45,7 +45,7 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 - `GET /auth/islogged`
 - `GET /auth/isBotCreator`
 
-## Bots
+## Bots [use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BBot.swift)
 
 - `POST /bots`
 - `GET /bots`
@@ -61,7 +61,7 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 - `GET /code_coverage/integration/:id`
 - `POST /code_coverage/integration/keypath`
 
-## Devices
+## Devices [use case](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BDevice.swift)
 
 - `POST /devices`
 - `GET /devices`
@@ -71,7 +71,7 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 - `DELETE /devices/:id/:rev`
 - `DELETE /devices`
 
-## Integrations
+## Integrations [use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BIntegration.swift)
 
 - `POST /bots/:id/integrations`
 - `GET /bots/:id/integrations/count`
@@ -119,17 +119,17 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 
 - `POST /integrations/:id/notifications`
     
-## Platform
+## Platform [use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BPlatform.swift)
 
 - `POST /platforms`
 - `GET /platforms`
 
-## Repositories
+## Repositories [use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BRepository.swift)
 
 - `GET /repositories`
 - `POST /repositories`
 
-## Source Control Management
+## Source Control Management [use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BSCM.swift)
 
 - `POST /bots/preflight` (depricated)
 - `POST /scm/preflight`
