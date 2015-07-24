@@ -2,12 +2,12 @@
 
 > Unofficial documentation of the Xcode Server API (Xcode 7 edition).
 
-**This is Work In Progress, more documentation is being added over time**
+**This is Work In Progress, endpoints are being documented over time**
 
 # :thought_balloon: Purpose
 Many of us like the [Xcode Server](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/xcode_guide-continuous_integration/) continuous integration tool. [Recently](https://developer.apple.com/videos/wwdc/2015/?id=410) it introduced an API which allows you to integrate it in your workflow. This API is however not yet fully documented, which this project attempts to fix.
 
-This knowledge is used in [XcodeServerSDK](https://github.com/czechboy0/XcodeServerSDK), an unofficial SDK for talking to the Xcode Server API written in Swift. This enables tools like [Buildasaur](https://github.com/czechboy0/Buildasaur), which allow for Xcode Server to be an even more powerful tool.
+This knowledge is used in [XcodeServerSDK](https://github.com/czechboy0/XcodeServerSDK), an unofficial SDK for talking to the Xcode Server API written in Swift, where you can get a good understanding of how to call many of the following APIs. This enables tools like [Buildasaur](https://github.com/czechboy0/Buildasaur), which allow for Xcode Server to be an even more powerful tool.
 
 # :warning: Warning
 Since there is no official documentation yet, calling APIs with bad parameters might brick your Xcode Server. Note that many of the API endpoints are used *internally* by Xcode Server, so it might not be smart to try everything. I will gradually document the tried and useful endpoints and warn against the more tricky ones. However, *I am in no way liable for what you do with this information*. I recommend to not experiment on your production Xcode Server and instead run a development Xcode Server on your development machine. There you can always reset everything with `sudo xcrun xcscontrol --reset`, which **deletes all** Xcode Server data including your setup bots and integration assets.
@@ -15,6 +15,13 @@ Since there is no official documentation yet, calling APIs with bad parameters m
 If you want to know more about reverse engineering how Xcode Server works under the hood, check out [my article](https://honzadvorsky.com/blog/2015/5/4/under-the-hood-of-xcode-server).
 
 # :rocket: API Documentation
+All the following API endpoints are JSON based. For more restricted actions like creating a bot, you need to use [Basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Such request has to contain a header like this
+
+```
+Authorization: Basic aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==
+```
+where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, concatenated by `:` and [base64](https://en.wikipedia.org/wiki/Base64) encoded.
+
 
 ## Assets
 
@@ -139,6 +146,24 @@ If you want to know more about reverse engineering how Xcode Server works under 
 - `DELETE /settings`
 - `POST /settings/service/enable`
 - `POST /settings/service/disable`
+
+## Users
+
+- `GET /users/:name/canCreateRepositories`
+- `GET /users/:name/canViewBots`
+- `GET /users/:name/canCreateBots`
+- `GET /users/canAnyoneCreateRepositories`
+- `GET /users/canAnyoneViewBots`
+- `GET /users/canAnyoneCreateBots`
+
+## Versions
+
+- `POST /versions`
+- `GET /versions`
+- `GET /versions/list`
+- `PATCH /versions/:id`
+- `DELETE /versions/:id/:rev`
+- `DELETE /versions`
 
 # :pencil2: Contributing
 Yes! Great! Create a Pull Request :+1:
