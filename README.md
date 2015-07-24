@@ -2,7 +2,7 @@
 
 > Unofficial documentation of the Xcode Server API (Xcode 7 edition).
 
-**This is Work In Progress**
+**This is Work In Progress, more documentation is being added over time**
 
 # :thought_balloon: Purpose
 Many of us like the Xcode Server continuous integration tool. Recently it introduced an API which allows you to integrate it in your workflow. This API is however not yet fully documented, which this project attempts to fix.
@@ -10,7 +10,7 @@ Many of us like the Xcode Server continuous integration tool. Recently it introd
 This knowledge is used in [XcodeServerSDK](https://github.com/czechboy0/XcodeServerSDK), an unofficial SDK for talking to the Xcode Server API written in Swift. This enables tools like [Buildasaur](https://github.com/czechboy0/Buildasaur), which allow for Xcode Server to be an even more powerful tool.
 
 # :warning: Warning
-Since there is no official documentation yet, calling APIs with bad parameters might brick your Xcode Server. Note that many of the API endpoints are used *internally* by Xcode Server, so it might not be smart to try everything. I will gradually document the tried and useful endpoints and warn against the more tricky ones. However, I am in no way liable for what you do with this information. I recommend to not experiment at your production Xcode Server and instead run a development Xcode Server on your development machine. There you can always reset everything with `sudo xcrun xcscontrol --reset`, which deletes all Xcode Server data including your setup bots and integration assets.
+Since there is no official documentation yet, calling APIs with bad parameters might brick your Xcode Server. Note that many of the API endpoints are used *internally* by Xcode Server, so it might not be smart to try everything. I will gradually document the tried and useful endpoints and warn against the more tricky ones. However, *I am in no way liable for what you do with this information*. I recommend to not experiment on your production Xcode Server and instead run a development Xcode Server on your development machine. There you can always reset everything with `sudo xcrun xcscontrol --reset`, which **deletes all** Xcode Server data including your setup bots and integration assets.
 
 If you want to know more about reverse engineering how Xcode Server works under the hood, check out [my article](https://honzadvorsky.com/blog/2015/5/4/under-the-hood-of-xcode-server).
 
