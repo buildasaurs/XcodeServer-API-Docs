@@ -7,11 +7,31 @@ Unofficial documentation of the Xcode Server API (Xcode 7 edition).
 Many of us like the Xcode Server continuous integration tool, which allows you to integrate it in your workflow with an API. This API is however not yet properly documented, which this project attempts to fix.
 
 # :warning: Warning
-Since there is no official documentation yet, calling APIs with bad parameters might brick your Xcode Server. I am in no way liable for what you do with this information. I recommend to not experiment at your production Xcode Server and instead run a development Xcode Server on your development machine. There you can always reset everything with `sudo xcrun xcscontrol --reset`.
+Since there is no official documentation yet, calling APIs with bad parameters might brick your Xcode Server. Note that many of the API endpoints are used *internally* by Xcode Server, so it might not be smart to try everything. I will gradually document the tried and useful endpoints and warn against the more tricky ones. However, I am in no way liable for what you do with this information. I recommend to not experiment at your production Xcode Server and instead run a development Xcode Server on your development machine. There you can always reset everything with `sudo xcrun xcscontrol --reset`, which deletes all Xcode Server data including your setup bots and integration assets.
 
 If you want to know more about reverse engineering how Xcode Server works under the hood, check out [my article](https://honzadvorsky.com/blog/2015/5/4/under-the-hood-of-xcode-server).
 
 # :rocket: API Documentation
+
+## Assets
+
+- `GET /integrations/:id/assets`
+- `GET /integrations/:id/install_product`
+- `GET /integrations/:id/:token/install_manifest.plist`
+- `GET /assets/token/:token/*`
+- `GET /assets/*`
+- `GET /profiles/ota.mobileconfig`
+- `GET /integrations/:id/files`
+- `POST /integrations/:id/files`
+- `PUT /files/:id/upload`
+
+## Authentication
+
+- `POST /auth/login`
+- `POST /auth/force_login`
+- `POST /auth/logout`
+- `GET /auth/islogged`
+- `GET /auth/isBotCreator`
 
 ## Bots
 
@@ -22,6 +42,16 @@ If you want to know more about reverse engineering how Xcode Server works under 
 - `DELETE /bots/:id/:rev`
 - `DELETE /bots`
 - `GET /bots/:id/stats`
+
+## Devices
+
+- `POST /devices`
+- `GET /devices`
+- `GET /devices/server`
+- `GET /devices/:id`
+- `PATCH /devices/:id`
+- `DELETE /devices/:id/:rev`
+- `DELETE /devices`
 
 ## Integrations
 
@@ -48,6 +78,10 @@ If you want to know more about reverse engineering how Xcode Server works under 
 - `GET /integrations/filter/tag/:tag/:bots?`
 - `GET /integrations/filter/:filter/:bots?`
 - `POST /integrations/bulk-import-integrations`
+
+
+
+
 
 # :pencil2: Contributing
 Yes! Great! Create a Pull Request :+1:
