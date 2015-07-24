@@ -1,10 +1,13 @@
-# XcodeServer-API-Docs
-Unofficial documentation of the Xcode Server API (Xcode 7 edition).
+# XcodeServer API Docs
 
-**This is still Work In Progress**
+> Unofficial documentation of the Xcode Server API (Xcode 7 edition).
+
+**This is Work In Progress**
 
 # :thought_balloon: Purpose
-Many of us like the Xcode Server continuous integration tool, which allows you to integrate it in your workflow with an API. This API is however not yet properly documented, which this project attempts to fix.
+Many of us like the Xcode Server continuous integration tool, which allows you to integrate it in your workflow with an API. This API is however not yet fully documented, which this project attempts to fix.
+
+This knowledge is used in [XcodeServerSDK](https://github.com/czechboy0/XcodeServerSDK), an unofficial SDK for talking to the Xcode Server API written in Swift. This enables tools like [Buildasaur](https://github.com/czechboy0/Buildasaur), which allow for Xcode Server to be an even more powerful tool.
 
 # :warning: Warning
 Since there is no official documentation yet, calling APIs with bad parameters might brick your Xcode Server. Note that many of the API endpoints are used *internally* by Xcode Server, so it might not be smart to try everything. I will gradually document the tried and useful endpoints and warn against the more tricky ones. However, I am in no way liable for what you do with this information. I recommend to not experiment at your production Xcode Server and instead run a development Xcode Server on your development machine. There you can always reset everything with `sudo xcrun xcscontrol --reset`, which deletes all Xcode Server data including your setup bots and integration assets.
@@ -43,6 +46,12 @@ If you want to know more about reverse engineering how Xcode Server works under 
 - `DELETE /bots`
 - `GET /bots/:id/stats`
 
+## Code Coverage
+
+- `POST /code_coverage/bulk_import`
+- `GET /code_coverage/integration/:id`
+- `POST /code_coverage/integration/keypath`
+
 ## Devices
 
 - `POST /devices`
@@ -79,9 +88,57 @@ If you want to know more about reverse engineering how Xcode Server works under 
 - `GET /integrations/filter/:filter/:bots?`
 - `POST /integrations/bulk-import-integrations`
 
+## Issues
 
+- `GET /integrations/:id/issues`
+- `POST /integrations/:id/issues`
+- `POST /integrations/:id/bulk_issues`
+- `POST /integrations/:id/issues/:issueID/silence`
+- `POST /integrations/:id/issues/:issueID/unsilence`
+- `POST /integrations/:id/issues/:issueID/associations`
+- `DELETE /integrations/:id/issues/:issueID/associations`
 
+## Misc
 
+- `DELETE /unittests`
+- `GET /unittests/cleanup`
+- `GET /ping`
+- `GET /hostname`
+- `GET /maintenance-tasks`
+
+## Notification
+
+- `POST /integrations/:id/notifications`
+    
+## Platform
+
+- `POST /platforms`
+- `GET /platforms`
+
+## Repositories
+
+- `GET /repositories`
+- `POST /repositories`
+
+## Source Control Management
+
+- `POST /bots/preflight` (depricated)
+- `POST /scm/preflight`
+- `POST /scm/branches`
+- `POST /bots/:id/reflight`
+- `POST /bots/:id/branches`
+- `GET /bots/:id/blueprint`
+- `GET /integrations/:id/blueprint`
+
+## Settings
+
+- `GET /settings`
+- `GET /settings/list`
+- `PATCH /settings/:id`
+- `DELETE /settings/:id/:rev`
+- `DELETE /settings`
+- `POST /settings/service/enable`
+- `POST /settings/service/disable`
 
 # :pencil2: Contributing
 Yes! Great! Create a Pull Request :+1:
