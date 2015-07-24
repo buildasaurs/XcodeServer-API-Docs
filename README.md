@@ -61,7 +61,7 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 - `GET /code_coverage/integration/:id`
 - `POST /code_coverage/integration/keypath`
 
-## Devices ([use case](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BDevice.swift))
+## Devices ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BDevice.swift))
 
 - `POST /devices`
 - `GET /devices`
