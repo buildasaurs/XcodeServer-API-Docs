@@ -15,7 +15,8 @@ Since there is no official documentation yet, calling APIs with bad parameters m
 If you want to know more about reverse engineering how Xcode Server works under the hood, check out [my article](https://honzadvorsky.com/blog/2015/5/4/under-the-hood-of-xcode-server).
 
 # :rocket: API Documentation
-All the following API endpoints are JSON based. For more restricted actions like creating a bot, you need to use [Basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Such request has to contain a header like this
+- All the following API endpoints are JSON based. 
+- For more restricted actions like creating a bot, you need to use [Basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Such request has to contain a header like this
 
 ```
 Authorization: Basic aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==
