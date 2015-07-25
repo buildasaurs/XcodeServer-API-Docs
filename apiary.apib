@@ -1,0 +1,150 @@
+FORMAT: 1A
+# Buildasaur-XcodeServer-API
+This API documentation describes how I've observed the Xcode Server API to behave and what I've been able to find out from poking around the source files. In no way is this an exhaustive documentation of the Xcode Server APIs, only a subset it.
+
+# Group Bots
+Bot (one automation element) manipulation. A bot is the logic which pulls your code and builds it based on its configuration.
+
+## Bot [/bots]
+Endpoint for manipulating Bots, the elementar automation objects.
+
+### List all Bots [GET]
++ Response 200 (application/json)
+
+        {
+            "count": 2,
+            "results": [
+                [Bot][],
+                [Bot][]
+            ]
+        }
+
+### Create a Bot [POST]
++ Request (application/json)
+        
+        {
+            "TO BE DOCUMENTED": "true"
+        }
+
++ Response 201 (application/json)
+
+        {
+            "TO BE DOCUMENTED": "true"
+        }
+
+## Bot [/bots/{id}]
+A single Bot object with its metadata.
+
++ Parameters
+    + id (required) ... Hex id of the bot from `tinyID` or `id` from a bot list fetch.
+
+### Retrieve a Bot [GET]
++ Response 200 (application/json)
+
+        {
+            "TO BE DOCUMENTED": "true"
+        }
+
+### Update a Bot [PATCH]
++ Request (application/json)
+
+        {
+            "TO BE DOCUMENTED": "true"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "TO BE DOCUMENTED": "true"
+        }
+        
+# Group Bot's Integrations
+Endpoint for manipulating Integrations of a specific bot
+
+## Retrieve specific integrations [/bots/{id}/integrations{?from,next,prev,last,summary_only,number}]
+### Retrieve integrations [GET]
+
++ Parameters
+    + from (number, optional) ... Number of integration to fetch from.
+    + next (number, optional) ... Count of integrations to fetch in ascending order.
+    + prev (number, optional) ... Count of integrations to fetch in descending order.
+    + last (number, optional) ... Count of integrations to fetch from the last backwards.
+    + summary_only (boolean, optional) ... If `true`, returns only short summary for each integration.
+    + number (number, optional) ... Integration number to fetch (returns [Integration][] instead of a list.)
+
++ Response 200 (application/json)
+
+        {
+            "count": 23,
+            "results": [
+                [Integration][],
+                [Integration][],
+                ...
+            ]
+        }
+
+## Get total integration count [/bots/{id}/integrations/count]
+### Retrieve the total Integration count [GET]
++ Response 200 (application/json)
+
+        {
+            "result":151
+        }
+
+## Integration endpoint [/bots/{id}/integrations]
+
+### Schedule a new Integration [POST]
++ Request
+
+        {}
+
++ Response 201 (application/json)
+
+        {
+            "TO BE DOCUMENTED": "true"
+        }
+
+
+# Group Integrations
+Integration is one run of a Bot on a particular state of source code with particular setup (testing devices, scheme, ...)
+
+
+## Integrations [/integrations]
+Endpoint for integration manipulation.
+
+## List all Integrations [GET]
++ Response 200 (application/json)
+
+        {
+            "count": 3,
+            "results": [
+                {
+                    "TO BE DOCUMENTED": "true"
+                }
+            ]
+        }
+
+## Integration [/integrations/{id}]
+
+### Retrieve an Integration [GET]
+
++ Response 200 (application/json)
+
+        {
+            "TO BE DOCUMENTED": "true"
+        }
+
+
+### Update an Integration [PATCH]
++ Request (application/json)
+
+        {
+            "TO BE DOCUMENTED": "true"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "TO BE DOCUMENTED": "true"
+        }
+
