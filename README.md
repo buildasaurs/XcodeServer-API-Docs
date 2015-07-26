@@ -2,8 +2,9 @@
 
 > Unofficial documentation of the Xcode Server API (Xcode 7 edition).
 
-**This is Work In Progress, endpoints are being documented over time.**
-**We're using the API Blueprint format, see the formatted documentation (WIP) at http://docs.xcodeserverapidocs.apiary.io/#. Feel free to contribute to the [apiary.apib](apiary.apib) file.**
+**For the best browsing experience, please visit the interactive [documentation view at Apiary](http://docs.xcodeserverapidocs.apiary.io).**
+
+We're using the [API Blueprint](https://apiblueprint.org) format, so feel free to contribute to the [apiary.apib](apiary.apib) file. There is also a snapshot of the interactive documentation in [docs.html](docs.html).
 
 # :thought_balloon: Purpose
 Many of us like the [Xcode Server](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/xcode_guide-continuous_integration/) continuous integration tool. [Recently](https://developer.apple.com/videos/wwdc/2015/?id=410) it introduced an API which allows you to integrate it in your workflow. This API is however not yet fully documented, which this project attempts to fix.
@@ -16,6 +17,9 @@ Since there is no official documentation yet, calling APIs with bad parameters m
 If you want to know more about reverse engineering how Xcode Server works under the hood, check out [my article](http://honzadvorsky.com/blog/2015/5/4/under-the-hood-of-xcode-server).
 
 # :rocket: API Documentation
+
+Endpoints with :white_check_mark: are fully documented in our [interactive documentation](http://docs.xcodeserverapidocs.apiary.io). Click on the section header (e.g. `Bots`) to jump to the documentation. Below is a list of API endpoints we're aiming to document.
+
 All the following API endpoints are **JSON based**. 
 
 For more restricted actions like creating a bot, you need to use [Basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Such request has to contain a header like this
@@ -24,7 +28,6 @@ For more restricted actions like creating a bot, you need to use [Basic authenti
 Authorization: Basic aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==
 ```
 where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, concatenated by `:` and [base64](https://en.wikipedia.org/wiki/Base64) encoded.
-
 
 ## Assets
 
@@ -46,15 +49,15 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 - `GET /auth/islogged`
 - `GET /auth/isBotCreator`
 
-## Bots ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BBot.swift))
+## [Bots](http://docs.xcodeserverapidocs.apiary.io/#reference/bots) ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BBot.swift))
 
-- `POST /bots`
-- `GET /bots`
-- `GET /bots/:id`
+- :white_check_mark: `POST /bots`
+- :white_check_mark: `GET /bots`
+- :white_check_mark: `GET /bots/:id`
 - `PATCH /bots/:id`
-- `DELETE /bots/:id/:rev`
-- `DELETE /bots`
-- `GET /bots/:id/stats`
+- :white_check_mark: `DELETE /bots/:id/:rev`
+- :white_check_mark: `DELETE /bots`
+- :white_check_mark: `GET /bots/:id/stats`
 
 ## Code Coverage
 
