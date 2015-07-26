@@ -738,7 +738,7 @@ Bot (one build job description). A bot is the logic which pulls your code and bu
 + Parameters
     + bot_id (string, required) - Bot id
 
-### Get all Integrations for a Bot [GET /bots/{bot_id}/integrations{?from,next,prev,last,summary_only,number}]
+### Bot Integrations [GET /bots/{bot_id}/integrations{?from,next,prev,last,summary_only,number}]
     
 + Parameters
     + bot_id (string, required) - Bot id
@@ -759,7 +759,7 @@ Bot (one build job description). A bot is the logic which pulls your code and bu
             ]
         }
 
-### Schedule a new Integration [POST]
+### Schedule an Integration [POST]
 
 + Request
 
@@ -769,7 +769,7 @@ Bot (one build job description). A bot is the logic which pulls your code and bu
 
     [Integration][]
 
-## Get Bot's Integration count [GET /bots/{id}/integrations/count]
+## Bot Integration count [GET /bots/{id}/integrations/count]
 
 + Response 200 (application/json)
 
