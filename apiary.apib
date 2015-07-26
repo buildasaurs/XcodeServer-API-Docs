@@ -414,7 +414,7 @@ Bot (one build job description). A bot is the logic which pulls your code and bu
 
 # Group Integrations
 
-## Integration [/bots/{bot_id}/integrations{?from,next,prev,last,summary_only,number}]
+## Integration [/bots/{bot_id}/integrations]
 
 + Model (application/json)
 
@@ -737,14 +737,16 @@ Bot (one build job description). A bot is the logic which pulls your code and bu
 
 + Parameters
     + bot_id (string, required) - Bot id
+
+### Get all Integrations for a Bot [GET /bots/{bot_id}/integrations{?from,next,prev,last,summary_only,number}]
+    
++ Parameters
     + from (number, optional) - Number of integration to fetch from.
     + next (number, optional) - Count of integrations to fetch in ascending order.
     + prev (number, optional) - Count of integrations to fetch in descending order.
     + last (number, optional) - Count of integrations to fetch from the last backwards.
     + number (number, optional) - Integration number to fetch. Returns Integration instead of a list.
     + summary_only (boolean, optional) - If `true`, returns only short summary for each integration.
-
-### Get all Integrations for a Bot [GET]
 
 + Response 200
 
