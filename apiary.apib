@@ -1,0 +1,36 @@
+FORMAT: 1A
+# XcodeServer API Docs
+This API documentation attempts to describe the Xcode Server API (Xcode 7 version).
+Example Bot fetch request to an Xcode Server running at `192.168.1.64` would be `GET https://192.168.1.64:20343/api/bots`.
+
+# Group Bots
+Bot (one build job description). A bot is the logic which pulls your code and builds it based on its configuration.
+
+## Bots [/bots]
+
+### Create a new Bot [POST]
+
+### List all Bots [GET]
+
+### Delete all Bots [DELETE]
+
+## Bot [/bots/{id}]
+
+### Get a specific Bot [GET]
+
+### Edit a Bot [PATCH]
+
+## Bot revision [/bots/{id}/{rev}]
+
+### Delete a Bot [DELETE]
+
+## Bot stats [/bots/{id}/stats]
+
+### Get Bot stats [GET]
+
+
+        
+
+
+
+

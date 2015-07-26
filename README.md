@@ -2,7 +2,8 @@
 
 > Unofficial documentation of the Xcode Server API (Xcode 7 edition).
 
-**This is Work In Progress, endpoints are being documented over time**
+**This is Work In Progress, endpoints are being documented over time.**
+**We're using the API Blueprint format, see the formatted documentation (WIP) at http://docs.xcodeserverapidocs.apiary.io/#. Feel free to contribute to the [apiary.apib](apiary.apib) file.**
 
 # :thought_balloon: Purpose
 Many of us like the [Xcode Server](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/xcode_guide-continuous_integration/) continuous integration tool. [Recently](https://developer.apple.com/videos/wwdc/2015/?id=410) it introduced an API which allows you to integrate it in your workflow. This API is however not yet fully documented, which this project attempts to fix.
