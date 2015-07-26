@@ -741,6 +741,7 @@ Bot (one build job description). A bot is the logic which pulls your code and bu
 ### Get all Integrations for a Bot [GET /bots/{bot_id}/integrations{?from,next,prev,last,summary_only,number}]
     
 + Parameters
+    + bot_id (string, required) - Bot id
     + from (number, optional) - Number of integration to fetch from.
     + next (number, optional) - Count of integrations to fetch in ascending order.
     + prev (number, optional) - Count of integrations to fetch in descending order.
