@@ -77,9 +77,9 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 
 ## [Integrations](http://docs.xcodeserverapidocs.apiary.io/#reference/integrations) ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BIntegration.swift))
 
-- `POST /bots/:id/integrations`
-- `GET /bots/:id/integrations/count`
-- `GET /bots/:id/integrations/:filter?`
+- :white_check_mark: `POST /bots/:id/integrations`
+- :white_check_mark: `GET /bots/:id/integrations/count`
+- :white_check_mark: `GET /bots/:id/integrations/:filter?`
 - `GET /integrations`
 - `GET /integrations/orphaned`
 - `GET /integrations/running`

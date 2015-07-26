@@ -116,11 +116,13 @@ Bot (one build job description). A bot is the logic which pulls your code and bu
 
 + Response 200
         
-        [
-            [Bot][],
-            [Bot][],
-            ...
-        ]
+        {
+            "count": 2,
+            "results": [
+                [Bot][],
+                [Bot][]
+            ]
+        }
         
 ## Delete all Bots [DELETE]
 
@@ -412,10 +414,365 @@ Bot (one build job description). A bot is the logic which pulls your code and bu
 
 # Group Integrations
 
-## Integrations [/integrations]
+## Integration [/bots/{bot_id}/integrations{?from,next,prev,last,summary_only,number}]
 
-### Get all integrations on the server [GET]
++ Model (application/json)
 
+        {
+            "_id": "34381887d1508144c12e26712808250f", 
+            "_rev": "21-3b73a8d420254e7494e50f1aac605ce5", 
+            "assets": {
+                "buildServiceLog": {
+                    "allowAnonymousAccess": false, 
+                    "fileName": "buildService.log", 
+                    "relativePath": "34381887d1508144c12e26712808155d-My First Bot/1/buildService.log", 
+                    "size": 97694
+                }, 
+                "sourceControlLog": {
+                    "allowAnonymousAccess": false, 
+                    "fileName": "sourceControl.log", 
+                    "relativePath": "34381887d1508144c12e26712808155d-My First Bot/1/sourceControl.log", 
+                    "size": 14684
+                }, 
+                "triggerAssets": [
+                    {
+                        "allowAnonymousAccess": false, 
+                        "fileName": "trigger-before-0.log", 
+                        "relativePath": "34381887d1508144c12e26712808155d-My First Bot/1/trigger-before-0.log", 
+                        "size": 0
+                    }
+                ], 
+                "xcodebuildLog": {
+                    "allowAnonymousAccess": false, 
+                    "fileName": "xcodebuild.log", 
+                    "relativePath": "34381887d1508144c12e26712808155d-My First Bot/1/xcodebuild.log", 
+                    "size": 305996
+                }, 
+                "xcodebuildOutput": {
+                    "allowAnonymousAccess": false, 
+                    "fileName": "xcodebuild_result.bundle.zip", 
+                    "relativePath": "34381887d1508144c12e26712808155d-My First Bot/1/xcodebuild_result.bundle.zip", 
+                    "size": 54697
+                }
+            }, 
+            "bot": {
+                "_id": "34381887d1508144c12e26712808155d", 
+                "_rev": "3-dd27fb0bdeb3e269fa456c53190d4961", 
+                "configuration": {
+                    "builtFromClean": 0, 
+                    "codeCoveragePreference": 2, 
+                    "deviceSpecification": {
+                        "deviceIdentifiers": [
+                            "ad2fac04895bd1bb06c1d50e3400349b", 
+                            "ad2fac04895bd1bb06c1d50e34004835", 
+                            "ad2fac04895bd1bb06c1d50e340065ef"
+                        ], 
+                        "filters": [
+                            {
+                                "architectureType": 0, 
+                                "filterType": 3, 
+                                "platform": {
+                                    "_id": "ad2fac04895bd1bb06c1d50e34001e3c", 
+                                    "_rev": "5-d2d6fb5737ae69af5bf6a388d3e6d711", 
+                                    "buildNumber": "13A4293g", 
+                                    "displayName": "iOS", 
+                                    "identifier": "com.apple.platform.iphoneos", 
+                                    "simulatorIdentifier": "com.apple.platform.iphonesimulator", 
+                                    "version": "9.0"
+                                }
+                            }
+                        ]
+                    }, 
+                    "exportsProductFromArchive": true, 
+                    "hourOfIntegration": 0, 
+                    "minutesAfterHourToIntegrate": 0, 
+                    "performsAnalyzeAction": true, 
+                    "performsArchiveAction": true, 
+                    "performsTestAction": true, 
+                    "periodicScheduleInterval": 0, 
+                    "scheduleType": 3, 
+                    "schemeName": "XCSTutorialProject1", 
+                    "sourceControlBlueprint": {
+                        "DVTSourceControlWorkspaceBlueprintIdentifierKey": "4B62D08D-C1A8-4DF1-BA43-400AA2EA4FB4", 
+                        "DVTSourceControlWorkspaceBlueprintLocationsKey": {
+                            "43ABCED2B571DB1C2336479F8D53EBF39F6D1B5D": {
+                                "DVTSourceControlBranchIdentifierKey": "master", 
+                                "DVTSourceControlBranchOptionsKey": 214, 
+                                "DVTSourceControlWorkspaceBlueprintLocationTypeKey": "DVTSourceControlBranch"
+                            }
+                        }, 
+                        "DVTSourceControlWorkspaceBlueprintNameKey": "XCSTutorialProject1", 
+                        "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey": "43ABCED2B571DB1C2336479F8D53EBF39F6D1B5D", 
+                        "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey": "XCSTutorialProject1.xcodeproj", 
+                        "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey": [
+                            {
+                                "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey": "43ABCED2B571DB1C2336479F8D53EBF39F6D1B5D", 
+                                "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey": "com.apple.dt.Xcode.sourcecontrol.Git", 
+                                "DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustSelfSignedCertKey": true, 
+                                "DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustedCertFingerprintKey": "1627ACA576282D36631B564DEBDFA648", 
+                                "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey": "github.com:czechboy0/XCSTutorialProject1.git"
+                            }
+                        ], 
+                        "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey": {
+                            "43ABCED2B571DB1C2336479F8D53EBF39F6D1B5D": {
+                                "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey": "DVTSourceControlSSHKeysAuthenticationStrategy"
+                            }
+                        }, 
+                        "DVTSourceControlWorkspaceBlueprintVersion": 203, 
+                        "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey": {
+                            "43ABCED2B571DB1C2336479F8D53EBF39F6D1B5D": "XCSTutorialProject1/"
+                        }, 
+                        "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey": {}, 
+                        "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey": {
+                            "43ABCED2B571DB1C2336479F8D53EBF39F6D1B5D": 0
+                        }
+                    }, 
+                    "testingDestinationType": 0, 
+                    "testingDeviceIDs": [], 
+                    "triggers": [
+                        {
+                            "name": "Run Script", 
+                            "phase": 1, 
+                            "scriptBody": "", 
+                            "type": 1
+                        }
+                    ], 
+                    "weeklyScheduleDay": 0
+                }, 
+                "doc_type": "bot", 
+                "group": {
+                    "name": "F724340B-EA6A-4078-ACE5-0712C48C7295"
+                }, 
+                "integration_counter": 1, 
+                "name": "My First Bot", 
+                "requiresUpgrade": false, 
+                "tinyID": "9CDF07B", 
+                "type": 1
+            }, 
+            "buildResultSummary": {
+                "analyzerWarningChange": 0, 
+                "analyzerWarningCount": 0, 
+                "codeCoveragePercentage": 62, 
+                "codeCoveragePercentageDelta": 0, 
+                "errorChange": 0, 
+                "errorCount": 0, 
+                "improvedPerfTestCount": 0, 
+                "regressedPerfTestCount": 0, 
+                "testFailureChange": 0, 
+                "testFailureCount": 0, 
+                "testsChange": 2, 
+                "testsCount": 2, 
+                "warningChange": 0, 
+                "warningCount": 0
+            }, 
+            "buildServiceFingerprint": "57:90:9B:AD:F9:F0:CD:5F:5A:32:89:A0:5A:7B:B2:3C:8A:B6:85:3C", 
+            "ccPercentage": 0, 
+            "ccPercentageDelta": 0, 
+            "currentStep": "completed", 
+            "doc_type": "integration", 
+            "duration": 83.98, 
+            "endedTime": "2015-07-20T23:01:30.937Z", 
+            "endedTimeDate": [
+                2015, 
+                7, 
+                20, 
+                23, 
+                1, 
+                30, 
+                937
+            ], 
+            "number": 1, 
+            "perfMetricKeyPaths": [
+                "XCSTutorialProject1Tests.XCSTutorialProject1Tests.testPerformanceExample()"
+            ], 
+            "perfMetricNames": [
+                "Time"
+            ], 
+            "queuedDate": "2015-07-20T23:00:05.790Z", 
+            "result": "succeeded", 
+            "revisionBlueprint": {
+                "DVTSourceControlWorkspaceBlueprintIdentifierKey": "FEDA05E6-36C6-469D-915E-D5DEA0212149", 
+                "DVTSourceControlWorkspaceBlueprintLocationsKey": {
+                    "43ABCED2B571DB1C2336479F8D53EBF39F6D1B5D": {
+                        "DVTSourceControlBranchIdentifierKey": "master", 
+                        "DVTSourceControlBranchOptionsKey": 50, 
+                        "DVTSourceControlLocationRevisionKey": "9c0a5ad540ce1ae440cabf097afc93163ee64f69", 
+                        "DVTSourceControlWorkspaceBlueprintLocationTypeKey": "DVTSourceControlBranch"
+                    }
+                }, 
+                "DVTSourceControlWorkspaceBlueprintNameKey": "XCSTutorialProject1", 
+                "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey": "43ABCED2B571DB1C2336479F8D53EBF39F6D1B5D", 
+                "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey": "XCSTutorialProject1.xcodeproj", 
+                "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey": [
+                    {
+                        "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey": "43ABCED2B571DB1C2336479F8D53EBF39F6D1B5D", 
+                        "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey": "com.apple.dt.Xcode.sourcecontrol.Git", 
+                        "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey": "github.com:czechboy0/XCSTutorialProject1.git"
+                    }
+                ], 
+                "DVTSourceControlWorkspaceBlueprintVersion": 203, 
+                "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey": {
+                    "43ABCED2B571DB1C2336479F8D53EBF39F6D1B5D": "XCSTutorialProject1"
+                }
+            }, 
+            "shouldClean": false, 
+            "startedTime": "2015-07-20T23:00:06.957Z", 
+            "success_streak": 1, 
+            "tags": [], 
+            "testHierarchy": {
+                "XCSTutorialProject1Tests": {
+                    "XCSTutorialProject1Tests": {
+                        "_xcsAggrDeviceStatus": {
+                            "32B43A37-DC22-48DF-ABAA-823F9F5DB019": 1, 
+                            "459419E1-0648-4E75-A164-74285BC16453": 1, 
+                            "A565030A-8F4E-4976-A1BD-926AD3D2E1FC": 1
+                        }, 
+                        "testExample()": {
+                            "32B43A37-DC22-48DF-ABAA-823F9F5DB019": 1, 
+                            "459419E1-0648-4E75-A164-74285BC16453": 1, 
+                            "A565030A-8F4E-4976-A1BD-926AD3D2E1FC": 1
+                        }, 
+                        "testPerformanceExample()": {
+                            "32B43A37-DC22-48DF-ABAA-823F9F5DB019": 1, 
+                            "459419E1-0648-4E75-A164-74285BC16453": 1, 
+                            "A565030A-8F4E-4976-A1BD-926AD3D2E1FC": 1
+                        }
+                    }, 
+                    "_xcsAggrDeviceStatus": {
+                        "32B43A37-DC22-48DF-ABAA-823F9F5DB019": 1, 
+                        "459419E1-0648-4E75-A164-74285BC16453": 1, 
+                        "A565030A-8F4E-4976-A1BD-926AD3D2E1FC": 1
+                    }
+                }
+            }, 
+            "testedDevices": [
+                {
+                    "ID": "ad2fac04895bd1bb06c1d50e3400349b", 
+                    "architecture": "x86_64", 
+                    "connected": true, 
+                    "deviceType": "com.apple.iphone-simulator", 
+                    "doc_type": "device", 
+                    "enabledForDevelopment": true, 
+                    "identifier": "32B43A37-DC22-48DF-ABAA-823F9F5DB019", 
+                    "isServer": false, 
+                    "modelCode": "iPhone6,1", 
+                    "modelName": "iPhone 5s", 
+                    "modelUTI": "com.apple.iphone-5s-a1453-d4c5b3", 
+                    "name": "iPhone 5s", 
+                    "osVersion": "9.0", 
+                    "platformIdentifier": "com.apple.platform.iphonesimulator", 
+                    "retina": false, 
+                    "revision": "5-d953bdcfc66b5beb7aaa7d70291b9974", 
+                    "simulator": true, 
+                    "supported": true, 
+                    "tinyID": "66CACE4", 
+                    "trusted": true
+                }, 
+                {
+                    "ID": "ad2fac04895bd1bb06c1d50e34004835", 
+                    "activeProxiedDevice": {
+                        "architecture": "i386", 
+                        "connected": true, 
+                        "deviceType": "com.apple.iphone-simulator", 
+                        "doc_type": "device", 
+                        "enabledForDevelopment": true, 
+                        "identifier": "B5776DA6-7974-4928-B088-D56510C4ACFE", 
+                        "isServer": false, 
+                        "modelCode": "Watch1,2", 
+                        "modelName": "Apple Watch - 42mm", 
+                        "modelUTI": "com.apple.watch-42mm", 
+                        "name": "Apple Watch - 42mm", 
+                        "osVersion": "2.0", 
+                        "platformIdentifier": "com.apple.platform.watchsimulator", 
+                        "retina": false, 
+                        "simulator": true, 
+                        "supported": true, 
+                        "trusted": true
+                    }, 
+                    "architecture": "x86_64", 
+                    "connected": true, 
+                    "deviceType": "com.apple.iphone-simulator", 
+                    "doc_type": "device", 
+                    "enabledForDevelopment": true, 
+                    "identifier": "459419E1-0648-4E75-A164-74285BC16453", 
+                    "isServer": false, 
+                    "modelCode": "iPhone7,1", 
+                    "modelName": "iPhone 6 Plus", 
+                    "modelUTI": "com.apple.iphone-6-plus-b4b5b9", 
+                    "name": "iPhone 6 Plus", 
+                    "osVersion": "9.0", 
+                    "platformIdentifier": "com.apple.platform.iphonesimulator", 
+                    "retina": false, 
+                    "revision": "48-c8228db5b0f7acd3feb8ae7df9290133", 
+                    "simulator": true, 
+                    "supported": true, 
+                    "tinyID": "4095F94", 
+                    "trusted": true
+                }, 
+                {
+                    "ID": "ad2fac04895bd1bb06c1d50e340065ef", 
+                    "architecture": "x86_64", 
+                    "connected": true, 
+                    "deviceType": "com.apple.iphone-simulator", 
+                    "doc_type": "device", 
+                    "enabledForDevelopment": true, 
+                    "identifier": "A565030A-8F4E-4976-A1BD-926AD3D2E1FC", 
+                    "isServer": false, 
+                    "modelCode": "iPad5,4", 
+                    "modelName": "iPad Air 2", 
+                    "modelUTI": "com.apple.ipad-air2-a1567-b4b5b9", 
+                    "name": "iPad Air 2", 
+                    "osVersion": "9.0", 
+                    "platformIdentifier": "com.apple.platform.iphonesimulator", 
+                    "retina": false, 
+                    "revision": "5-c374ea03d3ab5177141fa11934897d6e", 
+                    "simulator": true, 
+                    "supported": true, 
+                    "tinyID": "C2AF4D5", 
+                    "trusted": true
+                }
+            ], 
+            "tinyID": "969681B"
+        }    
+
++ Parameters
+    + bot_id (string, required) - Bot id
+    + from (number, optional) - Number of integration to fetch from.
+    + next (number, optional) - Count of integrations to fetch in ascending order.
+    + prev (number, optional) - Count of integrations to fetch in descending order.
+    + last (number, optional) - Count of integrations to fetch from the last backwards.
+    + summary_only (boolean, optional) - If `true`, returns only short summary for each integration.
+    + number (number, optional) - Integration number to fetch (returns [Integration][] instead of a list.)
+
+### Get all Integrations for a Bot [GET]
+
++ Response 200
+
+        {
+            "count": 2,
+            "results": [
+                [Integration][],
+                [Integration][]
+            ]
+        }
+
+### Schedule a new Integration [POST]
+
++ Request
+
+        {}
+
++ Response 201
+
+    [Integration][]
+
+## Get Bot's Integration count [GET /bots/{id}/integrations/count]
+
++ Response 200 (application/json)
+
+        {
+            "result":151
+        }
 
 
 
