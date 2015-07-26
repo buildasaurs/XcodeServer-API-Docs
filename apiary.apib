@@ -6,7 +6,7 @@ Example Bot fetch request to an Xcode Server running at `192.168.1.64` would be 
 # Group Bots
 Bot (one build job description). A bot is the logic which pulls your code and builds it based on its configuration.
 
-# Retrieve one Bot [/bots/{id}]
+# Bot [/bots/{id}]
 
 + Model (application/json)
 
@@ -179,7 +179,7 @@ Bot (one build job description). A bot is the logic which pulls your code and bu
     
 + Response 200
 
-    [Retrieve one Bot][]
+    [Bot][]
         
 
 ## Edit a Bot [PATCH]
@@ -192,11 +192,10 @@ Bot (one build job description). A bot is the logic which pulls your code and bu
 Fetches all Bots stored on the server.
 
 + Response 200
-    
-        [
-            [Retrieve one Bot][],
-            [Retrieve one Bot][]
-        ]
+        
+        [Bot][],
+        [Bot][]
+        
 
 ## Delete all Bots [DELETE]
 
