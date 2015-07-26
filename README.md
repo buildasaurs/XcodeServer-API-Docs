@@ -75,7 +75,7 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 - `DELETE /devices/:id/:rev`
 - `DELETE /devices`
 
-## Integrations ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BIntegration.swift))
+## [Integrations](http://docs.xcodeserverapidocs.apiary.io/#reference/integrations) ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BIntegration.swift))
 
 - `POST /bots/:id/integrations`
 - `GET /bots/:id/integrations/count`
