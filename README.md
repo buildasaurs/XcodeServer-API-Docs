@@ -6,6 +6,10 @@
 
 We're using the [API Blueprint](https://apiblueprint.org) format, so feel free to contribute to the [apiary.apib](apiary.apib) file. There is also a snapshot of the interactive documentation in [docs.html](docs.html).
 
+:mortar_board: Getting Started With Xcode Server 
+---------------------------------
+To find out how to set up Xcode Server on your Mac in minutes (and more), check out my [series of tutorials](http://honzadvorsky.com/pages/xcode_server_tutorials/).
+
 # :thought_balloon: Purpose
 Many of us like the [Xcode Server](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/xcode_guide-continuous_integration/) continuous integration tool. [Recently](https://developer.apple.com/videos/wwdc/2015/?id=410) it introduced an API which allows you to integrate it in your workflow. This API is however not yet fully documented, which this project attempts to fix.
 
