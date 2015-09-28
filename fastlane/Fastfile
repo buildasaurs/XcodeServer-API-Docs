@@ -1,14 +1,8 @@
 
 fastlane_version "1.13.0"
 
-default_platform :mac
-
-platform :mac do
-
-  lane :push do
-    sh "cd .. && apiary preview --output=docs.html"
-    message = prompt(text: "Commit message: ")
-    sh "cd .. && git add . && git commit -am \"#{message}\" && git push"
-  end
-
+lane :push do
+	sh "cd .. && apiary preview --output=docs.html"
+	message = prompt(text: "Commit message: ")
+	sh "cd .. && git add . && git commit -am \"#{message}\" && git push"
 end

@@ -45,7 +45,7 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 - `POST /integrations/:id/files`
 - `PUT /files/:id/upload`
 
-## Authentication ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BAuth.swift))
+## Authentication ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/master/XcodeServerSDK/API%20Routes/XcodeServer%2BAuth.swift))
 
 - `POST /auth/login`
 - `POST /auth/force_login`
@@ -53,7 +53,7 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 - `GET /auth/islogged`
 - `GET /auth/isBotCreator`
 
-## [Bots](http://docs.xcodeserverapidocs.apiary.io/#reference/bots) ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BBot.swift))
+## [Bots](http://docs.xcodeserverapidocs.apiary.io/#reference/bots) ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/master/XcodeServerSDK/API%20Routes/XcodeServer%2BBot.swift))
 
 - :white_check_mark: `POST /bots`
 - :white_check_mark: `GET /bots`
@@ -69,7 +69,7 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 - `GET /code_coverage/integration/:id`
 - `POST /code_coverage/integration/keypath`
 
-## Devices ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BDevice.swift))
+## Devices ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/master/XcodeServerSDK/API%20Routes/XcodeServer%2BDevice.swift))
 
 - `POST /devices`
 - `GET /devices`
@@ -79,7 +79,7 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 - `DELETE /devices/:id/:rev`
 - `DELETE /devices`
 
-## [Integrations](http://docs.xcodeserverapidocs.apiary.io/#reference/integrations) ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BIntegration.swift))
+## [Integrations](http://docs.xcodeserverapidocs.apiary.io/#reference/integrations) ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/master/XcodeServerSDK/API%20Routes/XcodeServer%2BIntegration.swift))
 
 - :white_check_mark: `POST /bots/:id/integrations`
 - :white_check_mark: `GET /bots/:id/integrations/count`
@@ -127,17 +127,17 @@ where `aGVsbG93b3JsZDpzZWNyZXRwYXNzd29yZA==` is just `username` and `password`, 
 
 - `POST /integrations/:id/notifications`
     
-## Platform ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BPlatform.swift))
+## Platform ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/master/XcodeServerSDK/API%20Routes/XcodeServer%2BPlatform.swift))
 
 - `POST /platforms`
 - `GET /platforms`
 
-## Repositories ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BRepository.swift))
+## Repositories ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/master/XcodeServerSDK/API%20Routes/XcodeServer%2BRepository.swift))
 
 - `GET /repositories`
 - `POST /repositories`
 
-## Source Control Management ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/swift-2/XcodeServerSDK/API%20Routes/XcodeServer%2BSCM.swift))
+## Source Control Management ([use cases](https://github.com/czechboy0/XcodeServerSDK/blob/master/XcodeServerSDK/API%20Routes/XcodeServer%2BSCM.swift))
 
 - `POST /bots/preflight` (depricated)
 - `POST /scm/preflight`
