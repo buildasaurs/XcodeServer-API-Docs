@@ -2,6 +2,8 @@
 
 > Unofficial documentation of the Xcode Server API (Xcode 7 edition).
 
+*In late 2015, Apple published official [Xcode Server API documentation](https://developer.apple.com/library/ios/documentation/Xcode/Conceptual/XcodeServerAPIReference/index.html#//apple_ref/doc/uid/TP40016472-CH1-SW1).* This project will thus not be maintained anymore, but feel free to use the existing examples while they're relevant.
+
 **For the best browsing experience, please visit the interactive [documentation view at Apiary](http://docs.xcodeserverapidocs.apiary.io).**
 
 We're using the [API Blueprint](https://apiblueprint.org) format, so feel free to contribute to the [apiary.apib](apiary.apib) file. There is also a snapshot of the interactive documentation in [docs.html](docs.html).
